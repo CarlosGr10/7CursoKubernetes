@@ -90,3 +90,28 @@ Todos los nodos y masters están conectados a una red física para poder hablars
 [algoritmo de consenso Raft](https://raft.github.io/)
 
 ![](https://i.imgur.com/gXOo7Ie.png)
+
+## Modelos declarativos e imperativos
+
+Imperativo vs Declarativo:
+
+Un sistema es imperativo cuando ejecuta una seria de pasos, que deben seguir un orden especifico. Si algun paso se interrumpe, la secuencia inicia desde el paso 1.
+Un sistema es declarativo cuando trata de converger a un estado deseado, a partir de un estado actual.
+
+## Visión general del modelo de red
+
+Todo el cluster es una gran red del mismo segmento
+Todos los nodos deben conectarse entre si, sin NAT (Network Adress Translation)
+Todos los pods deben conectarse entre si, sin NAT
+kube-proxy es el componente para conectarnos a pods y contenedores (userland proxy/iptables)
+Los pods trabajan a capa 3 (transporte) y los servicios a capa 4 (protocolos)
+
+[Videos de Redes](https://www.youtube.com/watch?v=EDXSvhbaTvM)
+
+[Repositorio de practica](https://github.com/platzi/curso-kubernetes)
+
+## Introducción a aplicación de prueba
+
+![](https://i.imgur.com/a3aIP5z.png)
+
+
