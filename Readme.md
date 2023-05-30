@@ -100,11 +100,11 @@ Un sistema es declarativo cuando trata de converger a un estado deseado, a parti
 
 ## Visión general del modelo de red
 
-Todo el cluster es una gran red del mismo segmento
-Todos los nodos deben conectarse entre si, sin NAT (Network Adress Translation)
-Todos los pods deben conectarse entre si, sin NAT
-kube-proxy es el componente para conectarnos a pods y contenedores (userland proxy/iptables)
-Los pods trabajan a capa 3 (transporte) y los servicios a capa 4 (protocolos)
+- Todo el cluster es una gran red del mismo segmento
+- Todos los nodos deben conectarse entre si, sin NAT (Network Adress Translation)
+- Todos los pods deben conectarse entre si, sin NAT
+- kube-proxy es el componente para conectarnos a pods y contenedores (userland proxy/iptables)
+- Los pods trabajan a capa 3 (transporte) y los servicios a capa 4 (protocolos)
 
 [Videos de Redes](https://www.youtube.com/watch?v=EDXSvhbaTvM)
 
@@ -114,4 +114,27 @@ Los pods trabajan a capa 3 (transporte) y los servicios a capa 4 (protocolos)
 
 ![](https://i.imgur.com/a3aIP5z.png)
 
+## Instalando nuestro primer cluster con Minikube, Kubeadm
 
+**Minikube** es una herramienta para desplegar un cluster en tu máquina local.
+
+**kubeadm** es un boostrap, un utilitario que permite realizar todo lo mostrado en el repositorio de Kelsey.
+
+Lecturas recomendadas
+
+https://github.com/kelseyhightower/kubernetes-the-hard-way
+
+https://github.com/kubernetes/minikube
+
+Para este caso instalamos minikube 
+
+Comando para iniciar un cluster de minikube utilizamos
+**Notas**: Es recomandable utiliozar Camelcase oara no tener errores  
+
+```python
+minikube start -p myCluster
+```
+
+```python
+minikube status
+```
